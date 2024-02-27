@@ -27,5 +27,7 @@ Route::middleware([
     })->name('dashboard');
 });
 Route::get('/contact',[PagesController::class,'contact']);
-
 Route::get('/about',[PagesController::class,'about']);
+Route::get('/tasks',[\App\Http\Controllers\TaskController::class,'index']);
+Route::get('/',[UserController::class,'index']);
+Route::get('/users',[UserController::class,'index']);
